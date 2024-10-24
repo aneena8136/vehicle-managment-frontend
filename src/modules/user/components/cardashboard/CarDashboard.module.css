@@ -1,0 +1,150 @@
+/* Container for the main content */
+.container {
+  padding: 20px;
+  margin-top: 180px; /* Add top margin to account for the height of the navbar */
+}
+
+/* Title section styling */
+.title {
+  text-align: center;
+  margin-bottom: 30px; /* Increased bottom margin for more space below the title */
+}
+
+/* Filter and search container styling */
+.filterContainer {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 30px; /* Added margin to separate the filter/search row from the vehicle cards */
+}
+
+/* Search container for positioning the icon */
+.searchContainer {
+  position: relative; /* Set position to relative for absolute positioning of the icon */
+  flex: 2; /* Allow the search box to grow */
+}
+
+/* Search icon styling */
+.searchIcon {
+  position: absolute; /* Position the icon absolutely */
+  left: 10px; /* Adjust left spacing as needed */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  color: #FF4D30; /* Change to your desired icon color */
+  pointer-events: none; /* Prevent clicks on the icon */
+}
+
+/* Search box styling */
+.searchBox {
+  width: 100%; /* Full width for input */
+  padding: 10px 10px 10px 40px; /* Add padding to the left to accommodate the icon */
+  border: 1px solid #ccc; /* Add border styling */
+  border-radius: 4px; /* Round the corners */
+  outline: none; /* Remove default outline */
+  font-size: 16px; /* Set font size for readability */
+}
+
+/* Filter and sort box styling */
+.filterBox, .sortBox {
+  flex: 1; /* Allow filters to grow */
+  padding: 10px; /* Consistent padding */
+  margin-left: 10px; /* Space between boxes */
+  border: 1px solid #ddd; /* Consistent border */
+  border-radius: 5px; /* Round the corners */
+}
+
+/* Card container for a responsive grid layout */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Styling for individual cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card title styling */
+.cardTitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Price styling: larger, bold, and highlighted */
+.price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #FF4D30;
+  margin-bottom: 10px;
+  text-align: center; /* Centers the price */
+}
+/* Row for model and fuel type */
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 8px; /* Add spacing between rows */
+}
+
+/* Align icon and text in the details */
+.detailItem {
+  display: flex;
+  align-items: center;
+}
+
+.detailItem svg {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+/* Button container for centering */
+.buttonContainer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Book Now button styling */
+.bookNowButton {
+  padding: 10px 15px;
+  background-color:#fff; /* Your chosen color */
+  color: #FF4D30;
+  border: 1px solid #FF4D30;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bookNowButton:hover {
+  background-color: #e03b27; /* Darker shade for hover effect */
+  color: white;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+
+  .filterContainer {
+    flex-direction: column;
+    gap: 10px; /* Add some space between search, filter, and sort boxes on smaller screens */
+  }
+
+  .searchBox, .filterBox, .sortBox {
+    flex: unset;
+    width: 100%;
+  }
+}

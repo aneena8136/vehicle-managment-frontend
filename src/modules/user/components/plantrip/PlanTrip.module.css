@@ -1,0 +1,105 @@
+/* Base Styles for larger screens (Desktops) */
+.planSection {
+  background-color: #ffffff;
+  padding: 5.3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.planContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.planContainerTitle {
+  margin: 0 auto;
+  text-align: center;
+  color: #010103;
+}
+
+.planContainerTitle h3 {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.planContainerTitle h2 {
+  font-size: 3.2rem;
+  font-family: "Poppins", sans-serif;
+  margin: 1.3rem 0 3rem 0;
+}
+
+.planContainerBoxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3.7rem;
+  padding: 0 3rem;
+}
+
+.planBox {
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.planBox h3 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.planBox p {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #706f7b;
+  line-height: 1.43;
+}
+
+/* Responsive Styles for Tablets (768px and below) */
+@media (max-width: 768px) {
+  .planContainerTitle h2 {
+    font-size: 2.6rem;
+  }
+
+  .planContainerBoxes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
+
+  .planBox {
+    padding: 1rem 2rem;
+  }
+
+  .planBox h3 {
+    font-size: 1.8rem;
+  }
+
+  .planBox p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Styles for Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .planContainerTitle h2 {
+    font-size: 2.2rem;
+  }
+
+  .planContainerBoxes {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .planBox {
+    padding: 1rem 1.5rem;
+  }
+
+  .planBox h3 {
+    font-size: 1.6rem;
+  }
+
+  .planBox p {
+    font-size: 0.85rem;
+  }
+}

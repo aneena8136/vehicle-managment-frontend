@@ -1,0 +1,113 @@
+.profileContainer {
+  max-width: 600px;
+  margin: 15rem auto; /* Reduced margin for smaller screens */
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* Stack vertically on smaller screens */
+}
+
+.imagePreview {
+  margin-bottom: 1rem; /* Add space below image for smaller screens */
+  text-align: center; /* Center image for smaller screens */
+}
+
+.imagePreview img {
+  width: 120px; /* Smaller image for smaller screens */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.profileDetails {
+  flex-grow: 1;
+  width: 100%; /* Ensure full width for small screens */
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.field input {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.submitButton {
+  padding: 0.6rem;
+  border-radius: 4px;
+  background-color: #FF4D30;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Media Queries */
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .profileContainer {
+    flex-direction: row; /* Horizontal layout for larger screens */
+  }
+  
+  .imagePreview {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .profileDetails {
+    max-width: 400px;
+  }
+
+  .submitButton {
+    max-width: 400px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 1rem;
+    margin: 10rem auto;
+  }
+
+  .imagePreview img {
+    width: 100px;
+    height: 120px;
+  }
+
+  .submitButton {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens (mobile) */
+@media (max-width: 480px) {
+  .profileContainer {
+    margin: 10rem auto;
+    padding: 0.5rem;
+  }
+
+  .imagePreview img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .submitButton {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}

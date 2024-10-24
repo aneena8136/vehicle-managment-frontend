@@ -1,0 +1,59 @@
+/* VehicleDetails.module.css */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Occupy half the width */
+    gap: 20px; /* Space between images */
+  }
+  
+  .imageWrapper {
+    flex: 1; /* Allow images to grow */
+    overflow: hidden; /* Hide overflow */
+    border: 1px solid #ddd; /* Optional border for images */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .image {
+    width: 100%; /* Full width of the wrapper */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .detailsContainer {
+    width: 45%; /* Occupy slightly less than half the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+  }
+  
+ .detailsContainer h1 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+  }
+  
+    .detailsContainer  p {
+    margin-bottom: 10px; /* Space below paragraphs */
+  }
+  
+  .payButton {
+    padding: 10px 20px; /* Button padding */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+  }
+  
+  .payButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  

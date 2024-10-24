@@ -1,0 +1,239 @@
+/* Base Styles for larger screens (Desktops) */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* Adjust to the height of the navbar */
+  position: relative;
+  height: calc(100vh - 80px); /* Subtract the navbar height from the full viewport */
+  background-color: #f8f9fa; /* Light background for better contrast */
+}
+
+.heroContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  max-width: 50rem;
+  margin-top: 5rem;
+  text-align: left; /* Align text to the left for larger screens */
+  padding-right: 20px; /* Space between text and image */
+}
+
+.heroText h4 {
+  font-size: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #010103;
+  font-weight: 700;
+  margin-bottom: 0.5rem; /* Space between heading elements */
+}
+
+.heroText h1 {
+  font-size: 3.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #010103;
+  line-height: 1.2;
+  margin: 1rem 0 2.3rem; /* Consistent margin */
+}
+
+.heroText h1 span {
+  color: #ff4d30;
+}
+
+.heroText p {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #706f7b;
+  margin-bottom: 4rem;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.heroBtns a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.bookRideBtn {
+  background-color: #ff4d30;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: all 0.3s;
+  border: 2px solid #ff4d30;
+}
+
+.bookRideBtn:hover {
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.6);
+  background-color: #fa4226;
+}
+
+.learnMoreBtn {
+  background-color: #010103;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid #010103;
+  transition: all 0.3s;
+}
+
+.learnMoreBtn:hover {
+  background-color: transparent;
+  color: #010103;
+}
+
+.heroCarImg {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  margin-top: 5rem;
+}
+
+.scrollUp {
+  position: fixed;
+  font-size: 2rem;
+  color: white;
+  background-color: #ff4d30;
+  border: 3px solid white;
+  width: 3.5rem;
+  height: 3.5rem;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 20;
+  display: none;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.scrollUp::before {
+  content: '\2191'; /* Unicode arrow pointing up */
+}
+
+.scrollUp:hover {
+  background-color: #e34326;
+  border-color: #ff4d30;
+  box-shadow: 0 8px 15px rgba(255, 77, 48, 0.6);
+}
+
+.showScroll {
+  display: flex;
+}
+
+.brands {
+  padding-top: 30px;
+  padding-right: 64px;
+}
+
+/* Responsive Styles for Tablets (768px and below) */
+@media (max-width: 768px) {
+  .heroSection {
+    margin-left: 0;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .heroText {
+    max-width: 100%;
+    text-align: center; /* Center text for smaller screens */
+    margin-top: 2rem;
+  }
+
+  .heroText h1 {
+    font-size: 2.4rem;
+  }
+
+  .heroText p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .heroBtns {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .heroCarImg {
+    display: none; /* Hide image on smaller screens */
+  }
+
+  .brands {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+/* Responsive Styles for Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .heroText h4 {
+    font-size: 1.6rem;
+  }
+
+  .heroText h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroBtns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bookRideBtn,
+  .learnMoreBtn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .heroCarImg {
+    display: none; /* Hide image on smaller screens */
+  }
+
+  .brands {
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .scrollUp {
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+}

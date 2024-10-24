@@ -1,0 +1,245 @@
+/* Container for vehicle section and booking section side by side */
+.centerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-left: 340px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  padding-top: 200px; /* Adjust based on navbar height */
+  max-width: 1200px; /* Adjust this value based on your design preference */
+  width: 100%;
+}
+
+.vehicleCard {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.vehicleSection {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.title{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+
+/* Style for the vehicle image carousel */
+.customCarousel {
+
+  max-width: 100%;
+  height: auto;
+}
+
+
+.vehicleImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Vehicle details section */
+.details {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.details .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FF4D30;
+}
+
+/* Booking section */
+.bookingSection {
+  flex: 1;
+  max-width: 35%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.bookingSection h2{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Booking form styling */
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bookingForm .formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingForm label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bookingForm select,
+.bookingForm input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bookingForm input[type="submit"] {
+  background-color: #FF4D30;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.bookingForm input[type="submit"]:hover {
+  background-color: #e6452b;
+}
+
+/* Submit and payment buttons styling */
+.submitButton,
+.paymentButton {
+  display: inline-block;
+  padding: 1rem;
+  background-color: #FF4D30;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make it take full width */
+  text-align: center;
+  margin-top: 1rem; /* Add margin between the buttons */
+}
+
+.submitButton:hover,
+.paymentButton:hover {
+  background-color: #e6452b;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .centerWrapper{
+    padding-left: 0;
+    padding-top: 80px;
+  }
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vehicleSection,
+  .bookingSection {
+    max-width: 100%;
+  }
+
+  .vehicleSection {
+    margin-bottom: 2rem;
+  }
+
+  .bookingSection {
+    padding: 15px;
+  }
+
+  .bookingForm input[type="submit"] {
+    padding: 0.75rem;
+  }
+
+  .vehicleCard {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .submitButton,
+  .paymentButton {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentContainer {
+    padding-top: 80px;
+  }
+
+  .vehicleSection,
+  .bookingSection {
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .vehicleImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .details {
+    box-shadow: none;
+    padding: 0.5rem;
+  }
+
+  .bookingSection {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .bookingForm {
+    gap: 1rem;
+  }
+
+  .bookingForm input[type="submit"] {
+    padding: 0.75rem;
+  }
+}

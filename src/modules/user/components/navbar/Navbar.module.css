@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+.navbar {
+  max-width: 133rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.7rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 99999;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.navbar__img {
+  width: 14.5rem;
+}
+
+.navbar__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  font-family: 'Poppins', sans-serif;
+  margin-left: auto;
+}
+
+.navbar__links a {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #010103;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar__links a:hover {
+  color: #ff4d30;
+}
+
+.navbar__buttons {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Button styles */
+.navbar__buttons__sign_in {
+  color: #010103;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+}
+
+.navbar__buttons__sign_in:hover {
+  color: #ff4d30;
+}
+
+.navbar__buttons__register {
+  background-color: #ff4d30;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: all 0.3s;
+  font-size: 1.2rem;
+}
+
+.navbar__buttons__register:hover {
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.5);
+  background-color: #fa4226;
+}
+
+.navbar__buttons a {
+  text-decoration: none;
+}
+
+/* Search bar styles */
+.search__bar {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem; /* Add space between search bar and buttons */
+}
+
+.search__input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
+.search__input:focus {
+  outline: none;
+  border-color: #ff4d30;
+  box-shadow: 0 0 5px rgba(255, 83, 48, 0.5);
+}
+
+.search__button {
+  background-color: #ff4d30;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search__button:hover {
+  background-color: #fa4226;
+}
+
+.toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+
+
+/* Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .toggle {
+    display: block; /* Show toggle button in mobile view */
+  }
+
+  .navbar__links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .navbar__links.active {
+    display: flex; /* Show links when active */
+    background-color: #fa4226;
+    padding: 10px;
+    
+  }
+
+  .navbar__links a:hover {
+    color: white;
+  }
+
+  
+  .navbar__links.active li {
+    color: white;
+  }
+
+  .navbar__buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 90%;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .navbar__buttons__register {
+    background-color: white;
+    color: #fa4226;
+    padding: 0rem 0.5rem; /* Adjust padding for buttons */
+    margin-bottom: 15px;
+  }
+
+}
+@media (max-width: 480px) {
+  .navbar__buttons {
+    gap: 0.5rem; /* Reduce gap for very small screens */
+  }
+
+  .navbar__links a {
+    font-size: 1rem; /* Smaller font size for links */
+  }
+
+  .navbar__buttons__register {
+    background-color: white;
+    color: #fa4226;
+    padding: 0rem 0.5rem; /* Adjust padding for buttons */
+  }
+}

@@ -1,0 +1,131 @@
+.container {
+  display: flex; /* Use flexbox for two-column layout */
+  padding: 10px; /* Reduced padding inside the container */
+  max-width: 600px; /* Set a smaller maximum width for the container */
+  margin: 80px auto; /* Center the container and add margin from the top */
+  border: 1px solid #ccc; /* Standard light gray border */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  background-color: white; /* Background color to differentiate from the shadow */
+  flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+}
+
+.leftSection {
+  flex: 1; /* Take half of the width */
+  background-color: white; /* White background */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 20px; /* Add padding */
+  text-align: center; /* Center text */
+  min-width: 250px; /* Minimum width to maintain layout */
+}
+
+.welcomeText {
+  font-weight: bolder;
+  color: #FF4D30; /* Orange text color */
+  font-size: 1.6rem; /* Reduced font size for welcome text */
+}
+
+.welcomeMessage {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin: 10px; /* Remove default margin */
+  color: #333; /* Darker text color for contrast */
+}
+
+.form {
+  flex: 1; /* Take the other half of the width */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center items vertically */
+  padding: 20px; /* Add padding */
+  min-width: 250px; /* Minimum width to maintain layout */
+}
+
+.form input {
+  padding: 8px; /* Reduced padding for inputs */
+  margin-bottom: 10px; /* Add space between inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 0.9rem; /* Reduced font size for inputs */
+}
+
+.form input:focus {
+  border-color: #FF4D30; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.submitButton {
+  background-color: #FF4D30; /* Orange button */
+  color: white; /* White text */
+  padding: 8px; /* Reduced padding */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9rem; /* Reduced font size for the button */
+}
+
+.submitButton:hover {
+  background-color: #e63e2b; /* Darker orange on hover */
+}
+
+.error {
+  color: red; /* Red text for errors */
+  font-size: 0.8rem; /* Smaller font size for errors */
+  margin: 5px 0; /* Space around error messages */
+}
+
+.logo {
+  margin-bottom: 15px; /* Reduced space below the logo */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    max-width: 100%; /* Full width on smaller screens */
+    margin: 20px; /* Reduced margin for smaller screens */
+  }
+
+  .leftSection, .form {
+    width: 100%; /* Full width for sections on small screens */
+    padding: 15px; /* Reduced padding for sections */
+  }
+
+  .welcomeText {
+    font-size: 1.4rem; /* Smaller font size for welcome text */
+  }
+
+  .welcomeMessage {
+    font-size: 1.1rem; /* Smaller font size for welcome message */
+  }
+
+  .form input, .submitButton {
+    font-size: 0.85rem; /* Smaller font size for inputs and buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcomeText {
+    font-size: 1.2rem; /* Smaller font size for welcome text */
+  }
+
+  .welcomeMessage {
+    font-size: 1rem; /* Smaller font size for welcome message */
+  }
+
+  .form input, .submitButton {
+    font-size: 0.8rem; /* Smaller font size for inputs and buttons */
+  }
+
+  .error {
+    font-size: 0.7rem; /* Smaller font size for errors */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Reduced space below the logo */
+  }
+}

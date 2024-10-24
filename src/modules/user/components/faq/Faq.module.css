@@ -1,0 +1,154 @@
+.faqSection {
+  padding: 5rem 1rem; /* Adjust padding for smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faqContent {
+  display: flex;
+  flex-direction: column;
+  color: #010103;
+  max-width: 100%; /* Adjust max width for smaller screens */
+}
+
+.faqTitle {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 1.5rem; /* Add padding for mobile */
+}
+
+.faqTitle h5 {
+  font-size: 2rem; /* Adjust font size for smaller screens */
+  font-weight: 700;
+}
+
+.faqTitle h2 {
+  font-size: 2.5rem; /* Adjust font size for smaller screens */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.faqTitle p {
+  font-size: 1rem; /* Adjust font size for smaller screens */
+  color: #706f7b;
+}
+
+.allQuestions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.faqBox {
+  display: flex;
+  flex-direction: column;
+  color: #010103;
+  background-color: white;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+  width: 100%; /* Set width to 100% to allow responsiveness */
+  max-width: 80rem; /* Max width for large screens */
+  cursor: pointer;
+  margin-bottom: 1.5rem; /* Add space between FAQ items */
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem; /* Adjust padding for smaller screens */
+  transition: 0.15s ease;
+}
+
+.faqQuestion p {
+  font-size: 1.2rem; /* Adjust font size for smaller screens */
+  font-weight: 500;
+}
+
+.faqQuestion i {
+  font-size: 1.8rem; /* Adjust font size for smaller screens */
+}
+
+.faqAnswer {
+  font-size: 1.1rem; /* Adjust font size for smaller screens */
+  color: #706f7b;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+  padding: 0 2rem;
+}
+
+.faqAnswer p {
+  font-size: 1rem; /* Adjust font size for smaller screens */
+}
+
+.activeAnswer {
+  max-height: 20rem;
+  padding: 2rem;
+  transition: 0.4s ease;
+}
+
+/* Media queries for tablet screens */
+@media (min-width: 768px) {
+  .faqSection {
+    padding: 8rem 2rem;
+  }
+
+  .faqTitle h5 {
+    font-size: 2.2rem;
+  }
+
+  .faqTitle h2 {
+    font-size: 3rem;
+  }
+
+  .faqTitle p {
+    font-size: 1.1rem;
+  }
+
+  .faqBox {
+    max-width: 60rem;
+  }
+
+  .faqQuestion p {
+    font-size: 1.3rem;
+  }
+
+  .faqAnswer p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media queries for larger desktop screens */
+@media (min-width: 1024px) {
+  .faqSection {
+    padding: 10rem 3rem;
+  }
+
+  .faqTitle h5 {
+    font-size: 2.5rem;
+  }
+
+  .faqTitle h2 {
+    font-size: 3.5rem;
+  }
+
+  .faqTitle p {
+    font-size: 1.2rem;
+  }
+
+  .faqBox {
+    max-width: 70rem;
+  }
+
+  .faqQuestion p {
+    font-size: 1.4rem;
+  }
+
+  .faqAnswer p {
+    font-size: 1.3rem;
+  }
+}
